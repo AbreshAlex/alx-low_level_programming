@@ -2,25 +2,25 @@
 #include<stdio.h>
 
 /**
- * main - print combination of 2 digit numbers
+ * main - entry
  *
- * Return: always 0
+ * Return: 0
  */
 int main(void)
 {
-	int i, e;
+	int b, d;
 
-	for (i = 0; i <= 98; i++)
+	for (b = 0; b <= 98; b++)
 	{
-		for (e = i + 1; e <= 99; e++)
+		for (d = b + 1; d <= 99; d++)
 		{
-			putchar((i / 10) + '0');
-			putchar((i % 10) + '0');
+			putchar((b / 10) + '0');
+			putchar((b % 10) + '0');
 			putchar(' ');
-			putchar((e / 10) + '0');
-			putchar((e % 10) + '0');
+			putchar((d / 10) + '0');
+			putchar((d % 10) + '0');
 
-			if (i == 98 && e == 99)
+			if (b == 98 && d == 99)
 				continue;
 
 			putchar(',');
