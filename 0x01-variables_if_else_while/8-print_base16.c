@@ -15,6 +15,7 @@ putchar(i);
 else
 putchar(i + 97 - 58);
 }
+putchar('\n');
 
 return (0);
 }
