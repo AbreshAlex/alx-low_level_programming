@@ -10,8 +10,7 @@ char az;
 az = 'a';
 
 for (az = 'a'; az <= 'z'; az++)
-putchar(az);
-for (az = 'A'; az <= 'Z'; az++)
+if (az != 'q' && az != 'e')
 putchar(az);
 putchar('\n');
 
