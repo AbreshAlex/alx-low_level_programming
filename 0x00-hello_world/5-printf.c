@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * Return: 0
+ * main - a fun that prints a string using printf
+ * Return: always 0
  */
 
 int main(void)
-
 {
-printf("with proper grammar, but the outcome is a piece of art,\n");
+printf("with proper grammar, but the outcome is a piece of art,");
 return (0);
 }
