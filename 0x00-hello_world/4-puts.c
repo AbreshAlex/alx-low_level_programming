@@ -1,9 +1,12 @@
 #include <stdio.h>
 
 /**
- * puts - prints a string
- * Return: 0i think
+ * main - a fun prints a string
+ * Return: 0
  */
 
-int puts("\"Programming is like building a multilingual puzzle")
-return 0
+int main(void)
+{
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
+}
