@@ -11,8 +11,11 @@ int x;
 for (x = '0'; x <= '9'; x++)
 {
 putchar(x);
+if (x <= '8')
+{
 putchar(',');
 putchar(' ');
+}
 }
 putchar('\n');
 
