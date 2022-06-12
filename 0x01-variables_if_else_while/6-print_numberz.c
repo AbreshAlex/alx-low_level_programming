@@ -1,17 +1,16 @@
 #include <stdio.h>
+
 /**
- * main - entry
- *Return: 0
+ * main - print 0 to 9 by putchar
+ * Return: 0
  */
 int main(void)
 {
-	int b = '0';
+int n;
 
-	while (b <= '9')
-	{
-		putchar(b);
-		b++;
-	}
-	putchar('\n');
-	return (0);
+for (n = 48; n <= 57; n++)
+putchar(n);
+putchar('\n');
+
+return (0);
 }
