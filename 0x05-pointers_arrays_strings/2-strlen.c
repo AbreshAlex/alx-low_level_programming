@@ -2,6 +2,7 @@
 
 /**
  * _strlen - a fun that returns the length of a string
+ * excluding the terminating null byte ('\0')
  * @s: string to be measured
  * Return: the length
  */
