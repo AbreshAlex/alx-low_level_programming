@@ -7,24 +7,18 @@
  */
 void rev_string(char *s)
 {
+int x = 0, i, y = 0;
 
-int i, j;
-
-for (i = 0; s[i] != '\0'; i++)
+while (*(s + x) != '\0')
 {
-_putchar(s[i]);
-}
-_putchar('\n');
-
-for (j = 0; s[j] != '\0'; j++)
-;
-
-while (j >= 0)
-{
-_putchar(s[j]);
-j--;
+x++;
 }
 
-_putchar('\n');
+for (i = 0 ; i <= ((x - 1) / 2) ; i++)
+{
+y = *(s + i);
+*(s + i) = *(s + (x - (i + 1)));
+*(s + (x - (i + 1))) = y;
+}
 
 }
