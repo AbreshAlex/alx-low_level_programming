@@ -8,22 +8,23 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i = 0, j = 0, k = 0;
+int i = 0, j = 0, k;
 
-for (; s1[i] != '\0'; i++)
+for (; s1[i] != '\0' && s2[j] != '\0'; i++, j++)
 ;
 
-for (; s2[j] != '\0'; j++)
-;
-
-if (i < j)
-k = -15;
-
-if (i > j)
-k = 15;
-
-if (i == j)
+if (s1[i] == s2[j])
+{
 k = 0;
+}
+else if (s1[i] == '\0')
+{
+k = -15;
+}
+else
+{
+k = 15;
+}
 
 return (k);
 }
