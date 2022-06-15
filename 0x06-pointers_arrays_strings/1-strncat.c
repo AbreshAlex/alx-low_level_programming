@@ -15,10 +15,14 @@ int i = 0, j = 0;
 for (; dest[i] != '\0'; i++)
 ;
 
-for (; src[j] != src[n]; j++, i++)
-dest[i] = src[j];
+for (j = 0 ; j < n && src[j] != '\0' ; j++)
+dest[i + j] = src[j];
+dest[i + j] = '\0';
 
-dest[i - 1] = '\0';
+/*for (; src[j] != src[n]; j++, i++)*/
+/*dest[i] = src[j];*/
+
+/*dest[i] = '\0';*/
 
 return (dest);
 }
