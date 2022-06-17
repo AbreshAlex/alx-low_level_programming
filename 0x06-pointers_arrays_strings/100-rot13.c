@@ -9,20 +9,15 @@
 char *rot13(char *c)
 {
 int i, j;
-char A[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char a[27] = "abcdefghijklmnopqrstuvwxyz";
+char A[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char a[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (j = 0; c[j] != '\0'; j++)
-for (i = 0; i < 27; i++)
+for (i = 0; i < 53; i++)
+if (c[j] == A[i])
 {
-if ((c[j] == A[i] || c[j] == a[i]) && (((i <= 12))))
-{
-c[j] = c[j] + 13;
-}
-else if ((c[j] == A[i] || c[j] == a[i]) && (((i > 12))))
-{
-c[j] = c[j] - 13;
-}
+c[j] = a[i];
+break;
 }
 
 return (c);
