@@ -8,37 +8,22 @@
 
 char *rot13(char *c)
 {
-int i = 0;
+int i, j;
+char A[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char a[27] = "abcdefghijklmnopqrstuvwxyz";
 
-for (; c[i] != '\0'; i++)
+for (j = 0; c[j] != '\0'; j++)
+for (i = 0; i < 27; i++)
 {
-if (((('a' <= c[i]) && (c[i] <= 'z')) ||
-(('A' <= c[i]) && (c[i] <= 'Z'))) && ((c[i] > 'm') || (c[i] > 'M')))
+if ((c[j] == A[i] || c[j] == a[i]) && (((i <= 12))))
 {
-c[i] = c[i] - 13;
+c[j] = c[j] + 13;
 }
-else
+else if ((c[j] == A[i] || c[j] == a[i]) && (((i > 12))))
 {
-c[i] = c[i] + 13;
+c[j] = c[j] - 13;
 }
 }
 
-
-
-
-/*for (; c[i] != '\0'; i++)
-{
-while ((('a' <= c[i]) && (c[i] <= 'z')) || (('A' <= c[i]) && (c[i] <= 'Z')))
-{
-if ((c[i] > 'm') || (c[i] > 'M'))
-{
-c[i] = c[i] - 13;
-}
-else
-{
-c[i] = c[i] + 13;
-}
-}
-}*/
 return (c);
 }
