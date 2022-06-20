@@ -17,7 +17,7 @@ for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] == *p)
 
-break;
+return (s[i]);
 }
 
 
@@ -26,5 +26,5 @@ p = &s[i];
 if (s[i] == '\0')
 *p = '0';
 
-return (p);
+return (0);
 }
