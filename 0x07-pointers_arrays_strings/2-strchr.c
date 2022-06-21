@@ -24,7 +24,7 @@ break;
 p = &s[i];
 
 if (s[i] == '\0')
-*p = '0';
+p = 0;
 
 return (p);
 }
