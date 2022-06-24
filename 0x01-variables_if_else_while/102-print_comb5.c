@@ -1,32 +1,32 @@
-
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- * main - entry
- *
+ * main - print comb of 2 dig
  * Return: 0
  */
 int main(void)
 {
-	int b, d;
+int i, j, k;
 
-	for (b = 0; b <= 98; b++)
-	{
-		for (d = b + 1; d <= 99; d++)
-		{
-			putchar((b / 10) + '0');
-			putchar((b % 10) + '0');
-			putchar(' ');
-			putchar((d / 10) + '0');
-			putchar((d % 10) + '0');
+for (i = '0'; i < '8'; i++)
+{
+for (j = i + 1; j < '9'; j++)
+{
+for (k = j + 1; k <= '9'; k++)
+{
+putchar(i);
+putchar(j);
+putchar(k);
 
-			if (b == 98 && d == 99)
-				continue;
+if (i == '7' && j == '8' && k == '9')
+break;
 
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
-	return (0);
+putchar(',');
+putchar(' ');
+}
+}
+}
+putchar('\n');
+
+return (0);
 }
