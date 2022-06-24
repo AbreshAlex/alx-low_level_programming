@@ -1,31 +1,28 @@
 #include <stdio.h>
+
 /**
- * main - entry
+ * main - print comb of 2 dig
  * Return: 0
  */
 int main(void)
 {
-	int x, y, z;
+int i, j;
 
-	for (x = '0'; x < '8'; x++)
-	{
-		for (y = '0'; y <= '8'; y++)
-		{
-			for (z = '0'; z <= '9'; z++)
-			{
-				if (x < y && y < z)
-				{
-					putchar(x);
-					putchar(y);
-					putchar(z);
-					if (x == '7' && y == '8' && z > '8')
-						continue;
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+for (i = '0'; i < '9'; i++)
+{
+for (j = i + 1; j <= '9'; j++)
+{
+putchar(i);
+putchar(j);
+
+if (i == '8' && j == '9')
+break;
+
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+
+return (0);
 }
