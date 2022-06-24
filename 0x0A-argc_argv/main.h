@@ -1,3 +1,4 @@
+
 int _putchar(char c);
-void whatsmyname(char *argv[]);
+int whatsmyname(char *argv[]);
 
