@@ -15,6 +15,9 @@ char *arr = malloc(size);
 if (size == 0)
 return (NULL);
 
+if (*arr == NULL)
+return (NULL);
+
 for (; i < size; i++)
 *(arr + i) = c;
 
