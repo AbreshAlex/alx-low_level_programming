@@ -18,19 +18,21 @@ return (NULL);
 arr = malloc(height * sizeof(int *));
 if (arr == NULL)
 {
-free(arr);
-return (NULL);
+	free(arr);
+	return (NULL);
 }
 
 for (i = 0; i <= width; i++)
 {
-arr[i] = malloc(width * sizeof(int));
-if (arr[i] == NULL)
-{
-free(arr[i]);
-free(arr);
-return (NULL);
-}
+	arr[i] = malloc(width * sizeof(int));
+	if (arr[i] == NULL)
+	{
+		for (; i >= 0; i--)
+		free(arr[i]);
+
+		free(arr);
+		return (NULL);
+	}
 }
 
 for (i = 0; i <= height; i++)
