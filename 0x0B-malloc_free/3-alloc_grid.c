@@ -22,13 +22,13 @@ if (arr == NULL)
 	return (NULL);
 }
 
-for (i = 0; i <= width; i++)
+for (i = 0; i <= height; i++)
 {
 	arr[i] = malloc(width * sizeof(int));
 	if (arr[i] == NULL)
 	{
 		for (; i >= 0; i--)
-		free(arr[i]);
+		free(arr[i - 1]);
 
 		free(arr);
 		return (NULL);
