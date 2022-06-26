@@ -23,7 +23,7 @@ arr = malloc(i + j + 1);
 if (arr == NULL)
 return (NULL);
 
-for (k = 0; k < i; k++)
+for (k = 0; k <= i; k++)
 {
 *(arr + k) = s1[k];
 
@@ -37,6 +37,9 @@ for (k = 0; k < i; k++)
 
 for (k = 0; s2[k] != '\0'; k++)
 *(arr + i + k) = s2[k];
+
+*(arr + i + k) = s2[k];
+
 
 return (arr);
 }
