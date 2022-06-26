@@ -36,6 +36,7 @@ for (j = 0; str[j] != '\0'; j++)
 	{
 		for (l = 0; str[j] != ' ' && str[j] != '\0'; l++, j++)
 		arr[i][l] = str[j];
+		arr[i][l] = '\0';
 		i++;
 		continue;
 	}
