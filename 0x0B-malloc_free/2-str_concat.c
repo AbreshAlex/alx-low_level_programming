@@ -23,17 +23,20 @@ arr = malloc(i + j + 1);
 if (arr == NULL)
 return (NULL);
 
-for (k =  0; k <= i; k++)
+for (k = 0; k < i; k++)
 {
 *(arr + k) = s1[k];
-if (k == i)
-{
-for (j = 0; s2[j] != '\0'; j++)
-*(arr + k) = s2[j];
-*(arr + k + 1) = '\0';
-}
+
+/*if (k == i - 1)*/
+/*{*/
+/*for (j = 0; s2[j] != '\0'; j++)*/
+/**(arr + k + 1) = s2[j];*/
+/*}*/
+
 }
 
+for (k = 0; s2[k] != '\0'; k++)
+*(arr + i + k) = s2[k];
 
 return (arr);
 }
