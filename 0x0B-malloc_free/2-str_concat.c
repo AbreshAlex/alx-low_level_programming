@@ -13,9 +13,9 @@ char *arr;
 unsigned int i, j, k;
 
 if (s1 == NULL)
-s1[0] = '\0';
+s1 = "";
 if (s2 == NULL)
-s2[0] = '\0';
+s2 = "";
 
 for (i = 0; s1[i] != '\0'; i++)
 ;
@@ -41,8 +41,7 @@ for (k = 0; k <= i; k++)
 for (k = 0; s2[k] != '\0'; k++)
 *(arr + i + k) = s2[k];
 
-*(arr + i + k) = s2[k];
-
+*(arr + i + k) = '\0';
 
 return (arr);
 }
