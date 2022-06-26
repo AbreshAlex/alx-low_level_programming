@@ -16,8 +16,12 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		for (j = 0; av[i][j] != '\0'; k++, j++)
-			;
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			k++;
+		}
+	}
 	k = k + ac + 1;
 
 	str = malloc(sizeof(char) * k);
@@ -32,13 +36,13 @@ char *argstostr(int ac, char **av)
 			l++;
 			if (av[i][j + 1] == '\0')
 			{
-				str[l] = '\n';
+				str[l + 1] = '\n';
 				l++;
 			}
 		}
 	}
 
-str[k] = '\0';
+/*str[k] = '\0';*/
 
 	return (str);
 }
