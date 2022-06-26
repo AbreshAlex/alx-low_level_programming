@@ -17,19 +17,20 @@ return (NULL);
 
 arr = malloc(height * sizeof(int *));
 if (arr == NULL)
+{
+free (arr);
 return (NULL);
+}
 
 for (i = 0; i <= width; i++)
+{
 arr[i] = malloc(width * sizeof(int));
-
-
-
-/*for (i =  0; i < height; i++)*/
-/*{*/
-/*arr[i] = malloc(width * 4);*/
-/*if (arr[i] == NULL)*/
-/*return (NULL);*/
-/*}*/
+if (arr[i] == NULL)
+{
+free (arr[i]);
+return (NULL);
+}
+}
 
 for (i = 0; i <= height; i++)
 for (j = 0; j <= width; j++)
