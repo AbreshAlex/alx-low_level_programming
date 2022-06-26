@@ -22,7 +22,7 @@ if (arr == NULL)
 	return (NULL);
 }
 
-for (i = 0; i <= height; i++)
+for (i = 0; i < height; i++)
 {
 	arr[i] = malloc(width * sizeof(int));
 	if (arr[i] == NULL)
@@ -35,8 +35,8 @@ for (i = 0; i <= height; i++)
 	}
 }
 
-for (i = 0; i <= height; i++)
-for (j = 0; j <= width; j++)
+for (i = 0; i < height; i++)
+for (j = 0; j < width; j++)
 arr[i][j] = 0;
 ;
 
