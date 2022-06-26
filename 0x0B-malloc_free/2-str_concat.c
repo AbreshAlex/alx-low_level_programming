@@ -12,6 +12,10 @@ char *str_concat(char *s1, char *s2)
 char *arr;
 unsigned int i, j, k;
 
+if (s1 == NULL)
+s1[0] = '\0';
+if (s2 == NULL)
+s2[0] = '\0';
 
 for (i = 0; s1[i] != '\0'; i++)
 ;
@@ -19,7 +23,6 @@ for (j = 0; s2[j] != '\0'; j++)
 ;
 
 arr = malloc(i + j + 1);
-
 if (arr == NULL)
 return (NULL);
 
