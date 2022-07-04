@@ -3,7 +3,7 @@
 
 /**
  * struct dog - new type
- * @name: gor name
+ * @name: dog name
  * @owner: dog owner
  * @age: dog age
  */
@@ -13,5 +13,7 @@ struct dog
 	char *owner;
 	float age;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /*dog.h*/
