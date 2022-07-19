@@ -1,6 +1,5 @@
 #include "lists.h"
 
-
 /**
  * print_listint - prints elements of linked list
  * @h: pointer to list to print
@@ -17,7 +16,6 @@ size_t print_listint(const listint_t *h)
 		tracker = tracker->next;
 		s++;
 	}
-
 
 	return (s);
 }
