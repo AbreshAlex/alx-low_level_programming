@@ -10,11 +10,12 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t s = 0;
+	const listint_t *tracker = h;
 
-	while (h)
+	while (tracker)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", tracker->n);
+		tracker = tracker->next;
 		s++;
 	}
 
